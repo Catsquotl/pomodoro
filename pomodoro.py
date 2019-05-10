@@ -1,8 +1,12 @@
 #! /usr/bin/python3
 
-import os
 from time import sleep
+from colorama import Fore, Back, Style
+from pydub import AudioSegment
+from pydub.playback import play
 import pydub
+import os
+
 
 def run(tmin = 0,sec = 0):
     sec = sec
@@ -16,14 +20,18 @@ def run(tmin = 0,sec = 0):
            sec = 0
         timed = f'{tmin}:{sec}'
         os.system('clear')
-        print(timed)
+        if tmin < 24:
+          print(Fore.GREEN, Back.BLACK + timed)
+        else:
+          print(Fore.BLACK, Back.RED + timed)
 
+    print(Style.RESET_ALL)
+    os.system("clear")
     print("You have finished")
-    from pydub import AudioSegment
-    from pydub.playback import play
+
 
     sound = AudioSegment.from_file("tibetan-bowl-right-hit.wav", format="wav")
     play(sound)
 
 if __name__ == ('__main__'):
-    run(0,0)
+    run(24,55)
