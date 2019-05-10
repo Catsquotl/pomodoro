@@ -34,4 +34,4 @@ def run(tmin = 0,sec = 0):
     play(sound)
 
 if __name__ == ('__main__'):
-    run(24,55)
+    run(0,0)
