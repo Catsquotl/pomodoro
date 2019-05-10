@@ -17,7 +17,7 @@ def run(sec = 0, tmin = 0):
         os.system('clear')
         print(timed)
 
-    print("You have finnished")
+    print("You have finished")
 
 
 if __name__ == ('__main__'):
