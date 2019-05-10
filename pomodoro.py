@@ -24,5 +24,6 @@ def run(tmin = 0,sec = 0):
 
     sound = AudioSegment.from_file("tibetan-bowl-right-hit.wav", format="wav")
     play(sound)
+
 if __name__ == ('__main__'):
-    run(24,50)
+    run(0,0)
