@@ -2,18 +2,23 @@
 import os
 from time import sleep
 
-internal_count = 0
-sec = 0
-min = 0
 
-while min != 25:
-    sleep(1)
-    sec += 1 
-    if sec % 60 == 0:
-       min += 1
-       sec = 0
-    timed = f'{min}:{sec}'
-    os.system('clear')
-    print(timed)
+def run(sec = 0, tmin = 0):
+    sec = sec
+    tmin = tmin
 
-print("You have finnished")
+    while tmin != 25:
+        sleep(1)
+        sec += 1 
+        if sec % 60 == 0:
+           tmin += 1
+           sec = 0
+        timed = f'{tmin}:{sec}'
+        os.system('clear')
+        print(timed)
+
+    print("You have finnished")
+
+
+if __name__ == ('__main__'):
+    run(50,24)
