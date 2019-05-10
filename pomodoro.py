@@ -1,9 +1,10 @@
 #! /usr/bin/python3
+
 import os
 from time import sleep
+import pydub
 
-
-def run(sec = 0, tmin = 0):
+def run(tmin = 0,sec = 0):
     sec = sec
     tmin = tmin
 
@@ -18,7 +19,10 @@ def run(sec = 0, tmin = 0):
         print(timed)
 
     print("You have finished")
+    from pydub import AudioSegment
+    from pydub.playback import play
 
-
+    sound = AudioSegment.from_file("tibetan-bowl-right-hit.wav", format="wav")
+    play(sound)
 if __name__ == ('__main__'):
-    run(0,0)
+    run(24,50)
