@@ -21,4 +21,4 @@ def run(sec = 0, tmin = 0):
 
 
 if __name__ == ('__main__'):
-    run(50,24)
+    run(0,0)
