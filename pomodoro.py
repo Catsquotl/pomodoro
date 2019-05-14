@@ -8,7 +8,10 @@ import pydub
 import os
 
 
-def run(tmin = 0,sec = 0):
+dirname = os.path.dirname(__file__)
+filename = os.path.join(dirname, "./tibetan-bowl-right-hit.wav")
+
+def run(tmin = 0,sec = 0, filename=filename):
     sec = sec
     tmin = tmin
 
@@ -30,8 +33,8 @@ def run(tmin = 0,sec = 0):
     print("You have finished")
 
 
-    sound = AudioSegment.from_file("tibetan-bowl-right-hit.wav", format="wav")
+    sound = AudioSegment.from_file(filename, format="wav")
     play(sound)
 
 if __name__ == ('__main__'):
-    run(0,0)
+    run(24,55)
