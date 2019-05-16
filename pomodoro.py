@@ -8,7 +8,7 @@ import pydub
 import os
 
 
-dirname = os.path.dirname(__file__)
+dirname = os.path.dirname(os.path.realpath(__file__))
 filename = os.path.join(dirname, "./tibetan-bowl-right-hit.wav")
 
 
@@ -36,9 +36,10 @@ def run(tmin = 0,sec = 0, filename=filename):
     try:
         sound = AudioSegment.from_file(filename, format="wav")
         play(sound)
-    except:
-        print('Unable to play sound',err)
+    except Exception as err:
+        print('Unable to play sound' + err)
 
 
 if __name__ == ('__main__'):
     run(0,0)
+    
