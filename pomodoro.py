@@ -41,5 +41,5 @@ def run(tmin = 0,sec = 0, filename=filename):
 
 
 if __name__ == ('__main__'):
-    run(0,0)
+    run(24,55)
     
